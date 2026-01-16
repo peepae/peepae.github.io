@@ -488,7 +488,7 @@ export default function BudgetApp() {
           // Confirm before overwriting
           if (confirm('This will replace all your current data. Continue?')) {
             setMonthlyData(imported.monthlyData || {})
-            setCategories(imported.categories?.length > 0 ? imported.categories : [UNCATEGORIZED_CATEGORY])
+            setCategories(imported.categories || [])
             setSavingsGoal(imported.savingsGoal || 5000)
             setInitialBalance(imported.initialBalance || 0)
             setSavingsPots(imported.savingsPots || [])
